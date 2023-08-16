@@ -1,33 +1,22 @@
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
+body {
     background: url('background.svg') no-repeat center center fixed;
     background-size: cover;
-    pointer-events: none;
-}
-
-body.light-mode::before {
-    opacity: 0.3; /* Adjust as needed */
-}
-
-body.dark-mode::before {
-    opacity: 0.7; /* Adjust as needed */
+    overflow: auto;
+    margin: 0;
 }
 
 body.light-mode {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.3); /* Adjust as needed */
     color: black;
 }
 
 body.dark-mode {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.7); /* Adjust as needed */
     color: white;
 }
+
+/* rest of your CSS stays the same */
+
 
 nav {
     background-color: rgba(240, 240, 240, 0.3); /* Adding some opacity */
@@ -55,11 +44,13 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 80%;
+    width: 80%; /* changed from max-width to width */
     margin: 20px auto;
+    overflow: auto; /* allows content to scroll if it overflows the container */
 }
 
-#video1, #video2 {
+
+#video1, #video2, #video3, #video4, #video5, #video6, #video7, #video8 {
     margin: 20px;
     border: solid black 2px;
     padding-top: 2px;
